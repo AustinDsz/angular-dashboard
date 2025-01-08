@@ -1,0 +1,55 @@
+#title {
+    text-align: center;
+}
+
+#form-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 50px;
+}
+
+form {
+    border: 1px solid black;
+    border-radius: 10px;
+    padding: 50px;
+}
+
+#form-box div {
+    padding: 10px;
+}
+
+#username, #password {
+    
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-right: 50px;
+    padding-left: 10px;
+    border: 2px solid black;
+    border-radius: 10px;
+}
+
+.login-btn-area {
+    display: flex;
+    justify-content:space-evenly;
+    align-items: center;
+    
+}
+
+.login-btn-area > button {
+    border: 0px;
+    padding: 10px;
+    border-radius: 10px;
+    font-weight: bold;
+
+}
+
+.login-btn-area > button:hover {
+    opacity: 0.8;
+    cursor: pointer;
+}
+
+.login-btn {
+    background-color: red;
+    color: white;
+}

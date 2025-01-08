@@ -1,0 +1,16 @@
+h1 {
+    text-align: center;
+}
+
+.subheading {
+    text-align: center;
+}
+
+.content {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.image {
+    display: flex;
+}

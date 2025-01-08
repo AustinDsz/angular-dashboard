@@ -1,0 +1,24 @@
+.testimonials {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    border: 1px solid black;
+}
+
+.testimonials > div {
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.avatar-style {
+    border-radius: 100px;
+}
+
+.testimonials > div > div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}

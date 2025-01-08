@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration form</title>
+</head>
+<body>
+    <div>
+        <h1>Registration form</h1>
+        <p>this space is where you can share information on the section,<br> such as: name, dob, and address</p>
+
+        <div>
+            <form>
+
+                <div>
+                    <h2>Personal Information</h2>
+                <label for="name">Full Name</label><br>
+                <input type="text" name="name" id="name" placeholder="Enter full name"/>
+            </div>
+            <div>
+                <label for="nickname">Nick Name</label><br>
+                <input type="text" name="nickname" id="nickname" placeholder="Enter Nickname"/>
+            </div>
+            <div>
+                <label for="email">Email</label><br>
+                <input type="email" id="email_field" name="email" placeholder="Enter your email address">
+            </div>
+
+            <div>
+                <label for="phone-num">Phone No:</label><br>
+                <input type="number" id="phone-num" name="phone-num" placeholder="+91 0000 000 000">
+            </div>
+
+            <div>
+                <label for="Gender">Gender</label>
+                <div>
+                    <label>
+                        <input type="radio" id="Gender" name="Gender" value="Male"> Male
+                    </label>
+                    <br>
+                    <label>
+                        <input type="radio" id="Gender" name="Gender" value="Female"> Female
+                    </label>
+                    <br>
+                    <label>
+                        <input type="radio" id="Gender" name="Gender" value="Other"> Other
+                    </label>
+                </div>
+            </div>
+
+            <div>
+                <label for="date"> Date: <br>
+                    <input type="date" id="date" name="date" required>
+                </label>
+            </div>
+
+            <div>
+                <label for="time">Time</label><br>
+                <input type="time" id="time" name="time">
+            </div>
+
+            <div>
+                <label for="resume-file">Resume:</label><br>
+                <input type="file" name="resume-file" id="resume-file" accept=".pdf">
+            </div>
+
+            <div>
+                <label for="website">Enter your portfolio link:</label>
+                <input type="url" id="website" name="website" required>
+            </div>
+
+            <div>
+                <label>
+                    <input type="checkbox" name="terms" value="terms"> I accept the terms
+                </label>
+                <br>
+                <label>
+                    <input type="checkbox" name="market" value="market"> I agree to recieve marketing communication
+                </label>
+            </div>
+
+            <div>
+                <label>Marriage Status:</label><br>
+                    <select id="status" name="status">
+                        <option value="single">Single</option>
+                        <option value="married">Married</option>
+                        <option value="nores">Prefer not to say</option>
+                    </select>
+            </div>
+
+            <div>
+                <label for="comments">Any Comments:</label><br>
+                <textarea>
+                </textarea>
+            </div>
+
+            <div>
+                <input type="reset" value="Reset">
+                <button type="submit">Submit</button>
+            </div>
+            
+            </form>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,29 @@
+.heading {
+    text-align: center;
+    font-weight: bold;
+}
+
+.outer-box {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+
+}
+
+.outer-box > div {
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    margin: 10px;
+    border-radius: 10px;
+}
+
+.topic {
+    padding-left: 10px;
+}
+
+.desc {
+    padding: 10px;
+}
+.outer-box > div:hover {
+    cursor: pointer;
+    box-shadow: 0 4px 16px 0 rgba(0,0,0,0.2);
+}
