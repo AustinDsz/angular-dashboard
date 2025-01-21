@@ -1,3 +1,3 @@
 # Angular dashboard
 
-<img src="demo.gif" />
+<img src="demo.gif" alt="dashboard working"/>

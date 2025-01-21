@@ -11,22 +11,43 @@ import { Router } from '@angular/router';
 })
 export class SignupComponent {
   formData = {
-    full_name: '',
     email: '',
     password: '',
+    userData: {
+      full_name:''
+    }
   };
+
+  message: string = '';
+  messageType: 'success' | 'error' = 'success';
 
   constructor(private supabaseService: SupabaseService, private router: Router) {}
 
-  onSubmit() {
-    this.supabaseService.submitSignupForm(this.formData)
-      .then((response) => {
-        // Handle success (e.g., show a success message)
-        this.router.navigate(['/login']);
-      })
-      .catch((error) => {
-        // Handle error (e.g., show an error message)
-      });
+  async onSubmit() {
+    try {
+      const result = await this.supabaseService.signUp(
+        this.formData.email,
+        this.formData.password,
+        this.formData.userData.full_name
+      );
+
+      if (result.success) {
+        this.message = result.message;
+        this.messageType = 'success';
+
+        // Optionally redirect to login after a delay
+        setTimeout(() => {
+          this.router.navigate(['/login']);
+        }, 2000);
+      } else {
+        this.message = result.message;
+        this.messageType = 'error';
+      }
+    } catch (error: any) {
+      console.error('Signup error:', error);
+      this.message = error.message || 'Signup failed';
+      this.messageType = 'error';
+    }
   }
 
 }
