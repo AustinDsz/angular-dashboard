@@ -39,4 +39,16 @@ export class LoginComponent {
       this.errorMessage = 'An error occurred during login';
     }
   }
+
+
+  async signInWithGoogle() {
+    const result = await this.authService.Login()
+
+    if(result?.success) {
+        console.log(result.userData)
+    } else {
+        alert("Failed")
+    }
+  }
+
 }

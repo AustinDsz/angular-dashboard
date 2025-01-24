@@ -30,7 +30,7 @@ export class SupabaseService {
       });
 
       console.log(authData);
-      
+
       if (authError) throw authError;
 
       // 2. If auth signup successful, create profile in custom table
@@ -103,4 +103,32 @@ export class SupabaseService {
     }
 
   }
+
+  async Login() {
+    try {
+      const { data, error } = await this.supabase.auth.signInWithOAuth({
+        provider: 'google',
+        options: {
+          redirectTo:
+            'https://wwhecejcawnctpdrmtvq.supabase.co/auth/v1/callback', // function to get your URL
+        },
+      });
+
+      if (data) {
+        console.log(data);
+        return { success: true, userData: data };
+      }
+
+      if (error) {
+        throw error;
+      }
+
+      return { success: false };
+
+    } catch (error) {
+      console.log('Error:', error);
+      return { success: false };
+    }
+    }
+
 }
